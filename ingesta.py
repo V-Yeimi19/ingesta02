@@ -28,7 +28,7 @@ except ImportError:
     raise
 
 # Configuración por defecto incrustada en el código (reemplaza los valores CHANGE_ME por los reales)
-DEFAULTS = {x
+DEFAULTS = {
     "MYSQL": {
         "HOST": "localhost",
         "PORT": 3306,
@@ -38,7 +38,7 @@ DEFAULTS = {x
     },
     "CSV": {
         "OUTFILE": "data.csv",
-        "BATCH_SIZE": 1000,
+        "BATCH_SIZE": 2,
     },
     "S3": {
         "BUCKET": "yvarela2",     # reemplaza por tu bucket
@@ -195,3 +195,4 @@ def main(argv: Optional[list] = None) -> None:
 
 if __name__ == "__main__":
     main()
+
