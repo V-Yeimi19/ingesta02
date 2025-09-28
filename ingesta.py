@@ -33,7 +33,7 @@ DEFAULTS = {
         "HOST": "localhost",
         "PORT": 3306,
         "USER": "yvarela",
-        "PASSWORD": "yvarela123",      # reemplaza por tu contraseña
+        "PASSWORD": "tu_password_segura",      # reemplaza por tu contraseña
         "DATABASE": "taller6",    # reemplaza por tu base de datos
     },
     "CSV": {
@@ -195,6 +195,7 @@ def main(argv: Optional[list] = None) -> None:
 
 if __name__ == "__main__":
     main()
+
 
 
 
