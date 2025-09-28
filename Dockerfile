@@ -1,15 +1,12 @@
-FROM python:3-slim
+FROM python:3.11-slim
 
-# Directorio de trabajo dentro del contenedor
-WORKDIR /programas/ingesta
+WORKDIR /app
 
-# Instalar dependencias: MySQL connector y boto3 para S3
-RUN pip3 install --no-cache-dir \
-    mysql-connector-python \
-    boto3
+# Copiamos requirements (si los tienes) o instalamos directo
+RUN pip install --no-cache-dir mysql-connector-python boto3
 
-# Copiar el código dentro de la imagen
-COPY . .
+# Copiamos el script
+COPY ingesta.py .
 
-# Ejecutar el script; los argumentos se pueden pasar con `docker run ... --table ...`
-CMD ["python3", "./ingesta.py"]
+# Punto de entrada por defecto
+CMD ["python", "ingesta.py"]
