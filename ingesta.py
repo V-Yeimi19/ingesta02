@@ -32,8 +32,8 @@ DEFAULTS = {
     "MYSQL": {
         "HOST": "localhost",
         "PORT": 3306,
-        "USER": "yvarela",
-        "PASSWORD": "yvarela",      # reemplaza por tu contraseña
+        "USER": "admin",
+        "PASSWORD": "admin123",      # reemplaza por tu contraseña
         "DATABASE": "taller6",    # reemplaza por tu base de datos
     },
     "CSV": {
@@ -195,4 +195,5 @@ def main(argv: Optional[list] = None) -> None:
 
 if __name__ == "__main__":
     main()
+
 
